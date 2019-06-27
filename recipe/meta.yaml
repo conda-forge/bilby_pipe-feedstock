@@ -17,6 +17,9 @@ build:
     - bilby_pipe_generation = bilby_pipe.data_generation:main
     - bilby_pipe_analysis = bilby_pipe.data_analysis:main
     - bilby_pipe_create_injection_file = bilby_pipe.create_injections:main
+    - bilby_pipe_pp_test = bilby_pipe.pp_test:main
+    - bilby_pipe_plot = bilby_pipe.plot:main
+    - bilby_pipe_gracedb = bilby_pipe.gracedb:main
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
@@ -25,7 +28,7 @@ requirements:
     - python >=3.5
     - setuptools
   run:
-    - bilby >=0.4.1
+    - bilby >=0.5.2
     - configargparse
     - future
     - gwpy
@@ -37,6 +40,8 @@ requirements:
     - python >=3.5
     - scipy >=1.2.0
     - tqdm
+    - python-ldas-tools-framecpp
+    - python-nds2-client
 
 test:
   imports:
@@ -46,6 +51,9 @@ test:
     - bilby_pipe_generation --help
     - bilby_pipe_analysis --help
     - bilby_pipe_create_injection_file --help
+    - bilby_pipe_pp_test --help
+    - bilby_pipe_plot --help
+    - bilby_pipe_gracedb --help
 
 about:
   home: https://lscsoft.docs.ligo.org/bilby_pipe/
