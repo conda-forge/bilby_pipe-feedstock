@@ -10,7 +10,7 @@ source:
   sha256: abdae0f17390b8f9a71aa4c5654348b57e07db7ef28d7cca328f7694c68235b7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - bilby_pipe = bilby_pipe.main:main
