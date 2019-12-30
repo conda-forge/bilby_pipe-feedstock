@@ -1,5 +1,5 @@
 {% set name = "bilby_pipe" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,20 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58c47815d6a780f03e9eaf45188a80add7256125f95d70ba835df94f5ec31aaa
+  sha256: 10d3b9b27fdb61c5086e886a722851bbb846de7e15af7bf0d965ec499fb92234
 
 build:
   number: 0
   noarch: python
   entry_points:
     - bilby_pipe = bilby_pipe.main:main
-    - bilby_pipe_generation = bilby_pipe.data_generation:main
     - bilby_pipe_analysis = bilby_pipe.data_analysis:main
     - bilby_pipe_create_injection_file = bilby_pipe.create_injections:main
-    - bilby_pipe_pp_test = bilby_pipe.pp_test:main
-    - bilby_pipe_plot = bilby_pipe.plot:main
+    - bilby_pipe_generation = bilby_pipe.data_generation:main
     - bilby_pipe_gracedb = bilby_pipe.gracedb:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+    - bilby_pipe_plot = bilby_pipe.plot:main
+    - bilby_pipe_pp_test = bilby_pipe.pp_test:main
+    - bilby_pipe_review = bilby_pipe.review:main
+    - bilby_pipe_write_default_ini = bilby_pipe.parser:main
+  script: "{{ PYTHON }} -m pip install . -vv "
 
 requirements:
   host:
@@ -28,41 +30,44 @@ requirements:
     - python >=3.5
     - setuptools
   run:
-    - bilby >=0.5.2
+    - bilby >=0.6.2
     - configargparse
     - future
     - gwpy
+    - jinja2
     - ligo-gracedb
     - matplotlib-base
     - numpy
-    - pesummary
+    - pesummary >=0.2.4
     - pycondor >=0.5
     - python >=3.5
-    - scipy >=1.2.0
-    - tqdm
     - python-ldas-tools-framecpp
     - python-nds2-client
+    - scipy >=1.2.0
+    - tqdm
 
 test:
   imports:
     - bilby_pipe
   commands:
     - bilby_pipe --help
-    - bilby_pipe_generation --help
     - bilby_pipe_analysis --help
     - bilby_pipe_create_injection_file --help
-    - bilby_pipe_pp_test --help
-    - bilby_pipe_plot --help
+    - bilby_pipe_generation --help
     - bilby_pipe_gracedb --help
+    - bilby_pipe_plot --help
+    - bilby_pipe_pp_test --help
+    - bilby_pipe_review --help
+    - bilby_pipe_write_default_ini --help
 
 about:
-  home: https://lscsoft.docs.ligo.org/bilby_pipe/
-  doc_url: https://lscsoft.docs.ligo.org/bilby_pipe/
-  dev_url: https://git.ligo.org/lscsoft/bilby_pipe/
-  license: MIT
-  license_family: MIT
-  license_file: LICENSE
-  summary: Automating the running of bilby for gravitational wave signals
+  home: "https://lscsoft.docs.ligo.org/bilby_pipe/"
+  doc_url: "https://lscsoft.docs.ligo.org/bilby_pipe/"
+  dev_url: "https://git.ligo.org/lscsoft/bilby_pipe/"
+  license: "MIT"
+  license_family: "MIT"
+  license_file: "LICENSE"
+  summary: "Automating the running of bilby for gravitational wave signals"
   description: |
     A package for automating transient gravitational wave parameter estimation
 
