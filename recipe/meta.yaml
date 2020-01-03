@@ -30,7 +30,7 @@ requirements:
     - python >=3.5
     - setuptools
   run:
-    - bilby >=0.6.2
+    - bilby >=0.6.3
     - configargparse
     - future
     - gwpy
