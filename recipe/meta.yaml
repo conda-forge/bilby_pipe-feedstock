@@ -1,5 +1,5 @@
 {% set name = "bilby_pipe" %}
-{% set version = "0.3.8" %}
+{% set version = "0.3.9" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,11 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2b1c572b6c9318c0ff5428e1d5fe5b6359436141101e1cf9586c354014d842bb
+  sha256: 825f8b04c44e477cc55776ea96f26cb416c22ac8dede1c19af2797067df44e74
 
 build:
-  number: 0
-  noarch: python
   entry_points:
     - bilby_pipe = bilby_pipe.main:main
     - bilby_pipe_analysis = bilby_pipe.data_analysis:main
@@ -22,6 +20,9 @@ build:
     - bilby_pipe_pp_test = bilby_pipe.pp_test:main
     - bilby_pipe_review = bilby_pipe.review:main
     - bilby_pipe_write_default_ini = bilby_pipe.parser:main
+    - bilby_pipe_xml_converter = bilby_pipe.xml_converter:main
+  noarch: python
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv "
 
 requirements:
@@ -30,8 +31,9 @@ requirements:
     - python >=3.5
     - setuptools
   run:
-    - bilby >=0.6.3
+    - bilby >=0.6.4
     - configargparse
+    - dynesty >=1.0.0
     - future
     - gwpy
     - jinja2
@@ -49,6 +51,9 @@ requirements:
 test:
   imports:
     - bilby_pipe
+  requires:
+    # for bilby_pipe_xml_converter
+    - python-ligo-lw
   commands:
     - bilby_pipe --help
     - bilby_pipe_analysis --help
@@ -59,6 +64,7 @@ test:
     - bilby_pipe_pp_test --help
     - bilby_pipe_review --help
     - bilby_pipe_write_default_ini --help
+    - bilby_pipe_xml_converter --help
 
 about:
   home: "https://lscsoft.docs.ligo.org/bilby_pipe/"
