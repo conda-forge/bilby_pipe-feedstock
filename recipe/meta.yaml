@@ -1,13 +1,13 @@
 {% set name = "bilby_pipe" %}
-{% set version = "0.3.9" %}
+{% set version = "0.3.10" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 825f8b04c44e477cc55776ea96f26cb416c22ac8dede1c19af2797067df44e74
+  sha256: 219f9124fc7968fd9fa0b1671e29db1f6d87aaa4c6c300e9c019e2f8610d7f0a
 
 build:
   entry_points:
@@ -23,7 +23,7 @@ build:
     - bilby_pipe_xml_converter = bilby_pipe.xml_converter:main
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv "
+  script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   host:
@@ -67,13 +67,13 @@ test:
     - bilby_pipe_xml_converter --help
 
 about:
-  home: "https://lscsoft.docs.ligo.org/bilby_pipe/"
-  doc_url: "https://lscsoft.docs.ligo.org/bilby_pipe/"
-  dev_url: "https://git.ligo.org/lscsoft/bilby_pipe/"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE"
-  summary: "Automating the running of bilby for gravitational wave signals"
+  home: https://lscsoft.docs.ligo.org/bilby_pipe/
+  doc_url: https://lscsoft.docs.ligo.org/bilby_pipe/
+  dev_url: https://git.ligo.org/lscsoft/bilby_pipe/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Automating the running of bilby for gravitational wave signals
   description: |
     A package for automating transient gravitational wave parameter estimation
 
