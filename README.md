@@ -5,7 +5,7 @@ Home: https://lscsoft.docs.ligo.org/bilby_pipe/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Automating the running of bilby for gravitational wave signals
 
