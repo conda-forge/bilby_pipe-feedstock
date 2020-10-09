@@ -5,9 +5,13 @@ Home: https://lscsoft.docs.ligo.org/bilby_pipe/
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bilby_pipe-feedstock/blob/master/LICENSE.txt)
 
 Summary: Automating the running of bilby for gravitational wave signals
+
+Development: https://git.ligo.org/lscsoft/bilby_pipe/
+
+Documentation: https://lscsoft.docs.ligo.org/bilby_pipe/
 
 A package for automating transient gravitational wave parameter estimation
 
