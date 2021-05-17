@@ -57,9 +57,13 @@ test:
   imports:
     - bilby_pipe
   requires:
+    - pip
     # for bilby_pipe_xml_converter
     - python-ligo-lw
   commands:
+    # check requirements
+    - python -m pip check
+    # check entry points
     - bilby_pipe --help
     - bilby_pipe_analysis --help
     - bilby_pipe_create_injection_file --help
