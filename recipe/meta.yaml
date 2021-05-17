@@ -36,7 +36,7 @@ requirements:
     - python >=3.5
     - setuptools
   run:
-    - bilby >=1.0.0
+    - bilby >=1.1.2
     - configargparse
     - dynesty >=1.0.0
     - future
