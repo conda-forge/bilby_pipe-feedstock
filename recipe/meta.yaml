@@ -29,26 +29,30 @@ build:
     - bilby_pipe_xml_converter = bilby_pipe.xml_converter:main
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . -vv '
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
     - setuptools
   run:
-    - bilby >=1.1.2
+    - astropy
+    - bilby >=1.1.5
     - configargparse
     - dynesty >=1.0.0
     - future
+    - gwosc
     - gwpy
     - jinja2
     - ligo-gracedb
     - matplotlib-base
     - numpy
-    - pesummary >=0.2.4
+    - pesummary >=0.13.0
     - pycondor >=0.5
-    - python >=3.5
+    - python >=3.6
+    - python-lal
+    - python-lalsimulation
     - python-ldas-tools-framecpp
     - python-nds2-client
     - scipy >=1.2.0
