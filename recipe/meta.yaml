@@ -1,5 +1,5 @@
 {% set name = "bilby_pipe" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,26 +7,28 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 58e895df9323eb30aa7655c93625a010380c94799d01f633260bb8fac58ed367
+  sha256: e4a3e57d8f46ff2f01bd35e66854e7773790e611ae8cff201d40539cf0c48169
 
 build:
   entry_points:
     - bilby_pipe = bilby_pipe.main:main
+    - bilby_pipe_generation = bilby_pipe.data_generation:main
     - bilby_pipe_analysis = bilby_pipe.data_analysis:main
     - bilby_pipe_create_injection_file = bilby_pipe.create_injections:main
-    - bilby_pipe_generation = bilby_pipe.data_generation:main
-    - bilby_pipe_gracedb = bilby_pipe.gracedb:main
+    - bilby_pipe_xml_converter = bilby_pipe.xml_converter:main
+    - bilby_pipe_pp_test = bilby_pipe.pp_test:main
+    - bilby_pipe_review = bilby_pipe.review:main
     - bilby_pipe_plot = bilby_pipe.plot:main
     - bilby_pipe_plot_calibration = bilby_pipe.plot:plot_calibration
     - bilby_pipe_plot_corner = bilby_pipe.plot:plot_corner
     - bilby_pipe_plot_marginal = bilby_pipe.plot:plot_marginal
     - bilby_pipe_plot_skymap = bilby_pipe.plot:plot_skymap
     - bilby_pipe_plot_waveform = bilby_pipe.plot:plot_waveform
-    - bilby_pipe_pp_test = bilby_pipe.pp_test:main
-    - bilby_pipe_review = bilby_pipe.review:main
-    - bilby_pipe_to_ligo_skymap_samples = bilby_pipe.ligo_skymap:main
+    - bilby_pipe_gracedb = bilby_pipe.gracedb:main
     - bilby_pipe_write_default_ini = bilby_pipe.parser:main
-    - bilby_pipe_xml_converter = bilby_pipe.xml_converter:main
+    - bilby_pipe_process_mcmc = bilby_pipe.process_bilby_mcmc:main
+    - bilby_pipe_htcondor_sync = bilby_pipe.htcondor_sync:main
+    - bilby_pipe_to_ligo_skymap_samples = bilby_pipe.ligo_skymap:main
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
@@ -70,21 +72,23 @@ test:
     - python -m pip check
     # check entry points
     - bilby_pipe --help
+    - bilby_pipe_generation --help
     - bilby_pipe_analysis --help
     - bilby_pipe_create_injection_file --help
-    - bilby_pipe_generation --help
-    - bilby_pipe_gracedb --help
+    - bilby_pipe_xml_converter --help
+    - bilby_pipe_pp_test --help
+    - bilby_pipe_review --help
     - bilby_pipe_plot --help
     - bilby_pipe_plot_calibration --help
     - bilby_pipe_plot_corner --help
     - bilby_pipe_plot_marginal --help
     - bilby_pipe_plot_skymap --help
     - bilby_pipe_plot_waveform --help
-    - bilby_pipe_pp_test --help
-    - bilby_pipe_review --help
-    - bilby_pipe_to_ligo_skymap_samples --help
+    - bilby_pipe_gracedb --help
     - bilby_pipe_write_default_ini --help
-    - bilby_pipe_xml_converter --help
+    - bilby_pipe_process_mcmc --help
+    - bilby_pipe_htcondor_sync --help
+    - bilby_pipe_to_ligo_skymap_samples --help
 
 about:
   home: https://lscsoft.docs.ligo.org/bilby_pipe/

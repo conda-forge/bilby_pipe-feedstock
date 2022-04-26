@@ -5,7 +5,7 @@ Home: https://lscsoft.docs.ligo.org/bilby_pipe/
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bilby_pipe-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bilby_pipe-feedstock/blob/main/LICENSE.txt)
 
 Summary: Automating the running of bilby for gravitational wave signals
 
@@ -22,8 +22,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6894&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bilby_pipe-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6894&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bilby_pipe-feedstock?branchName=main">
       </a>
     </td>
   </tr>
