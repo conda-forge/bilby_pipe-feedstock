@@ -1,0 +1,13 @@
+diff --git a/setup.py b/setup.py
+index 9312790..6ae58a0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -92,7 +92,7 @@ setup(
+         "pycondor>=0.5",
+         "configargparse",
+         "ligo-gracedb",
+-        "bilby[gw]>=1.1.5",
++        "bilby>=1.1.5",
+         "scipy>=1.2.0",
+         "gwpy",
+         "gwosc",
