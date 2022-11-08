@@ -1,5 +1,5 @@
 {% set name = "bilby_pipe" %}
-{% set version = "1.0.6" %}
+{% set version = "1.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e4a3e57d8f46ff2f01bd35e66854e7773790e611ae8cff201d40539cf0c48169
+  sha256: c5c855e0bd2122f8aaf28a77ab9da9cdb188f78f0d918394e58d58ced21e34ac
   patches:
     # patch requirements for conda-forge (no extras, etc)
     - requirements.patch
@@ -33,7 +33,7 @@ build:
     - bilby_pipe_htcondor_sync = bilby_pipe.htcondor_sync:main
     - bilby_pipe_to_ligo_skymap_samples = bilby_pipe.ligo_skymap:main
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
