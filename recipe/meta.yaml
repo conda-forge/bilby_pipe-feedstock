@@ -50,7 +50,7 @@ requirements:
     - gwpy >=3.0
     - jinja2
     - ligo-gracedb
-    - matplotlib-base
+    - matplotlib-base <3.7
     - numpy
     - pesummary >=0.13.10
     - pycondor >=0.6
