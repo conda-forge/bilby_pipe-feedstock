@@ -1,5 +1,5 @@
 {% set name = "bilby_pipe" %}
-{% set version = "1.0.7" %}
+{% set version = "1.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c5c855e0bd2122f8aaf28a77ab9da9cdb188f78f0d918394e58d58ced21e34ac
+  sha256: b8bfdd8076c5e273f796c17bf1b6e06f71a111cfa7ddd9d73b7a4940d1281f78
 
 build:
   entry_points:
@@ -50,7 +50,7 @@ requirements:
     - gwpy >=3.0
     - jinja2
     - ligo-gracedb
-    - matplotlib-base
+    - matplotlib-base <3.7
     - numpy
     - pesummary >=0.13.10
     - pycondor >=0.6

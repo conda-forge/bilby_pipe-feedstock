@@ -1,11 +1,11 @@
-About bilby_pipe
-================
+About bilby_pipe-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bilby_pipe-feedstock/blob/main/LICENSE.txt)
 
 Home: https://lscsoft.docs.ligo.org/bilby_pipe/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bilby_pipe-feedstock/blob/main/LICENSE.txt)
 
 Summary: Automating the running of bilby for gravitational wave signals
 
