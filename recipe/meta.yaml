@@ -1,5 +1,5 @@
 {% set name = "bilby_pipe" %}
-{% set version = "1.0.10" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e63f1a9da033496e9a31bdd363f366fcca9b75bb75f0c990f4c7242e300de423
+  sha256: 8dc5d6edc5593549e3b21003c5a2f16c7ae7b84f2d46ff6aaab54454aa5ef5ff
 
 build:
   entry_points:
@@ -30,7 +30,7 @@ build:
     - bilby_pipe_htcondor_sync = bilby_pipe.htcondor_sync:main
     - bilby_pipe_to_ligo_skymap_samples = bilby_pipe.ligo_skymap:main
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
