@@ -29,6 +29,7 @@ build:
     - bilby_pipe_process_mcmc = bilby_pipe.process_bilby_mcmc:main
     - bilby_pipe_htcondor_sync = bilby_pipe.htcondor_sync:main
     - bilby_pipe_to_ligo_skymap_samples = bilby_pipe.ligo_skymap:main
+    - bilby_pipe_reweight_result = bilby_pipe.data_analysis:reweight
   noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
@@ -94,6 +95,7 @@ test:
     - bilby_pipe_process_mcmc --help
     - bilby_pipe_htcondor_sync --help
     - bilby_pipe_to_ligo_skymap_samples --help
+    - bilby_pipe_reweight_result --help
 
 about:
   home: https://lscsoft.docs.ligo.org/bilby_pipe/
