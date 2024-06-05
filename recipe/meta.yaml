@@ -111,5 +111,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - ColmTalbot
     - duncanmmacleod
     - GregoryAshton
