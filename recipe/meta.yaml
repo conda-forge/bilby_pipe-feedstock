@@ -53,7 +53,7 @@ requirements:
     - ligo-gracedb
     - matplotlib-base
     - numpy
-    - pesummary >=0.13.10
+    - pesummary >=1.3.1
     - plotly
     - pycondor >=0.6
     - python >=3.9
