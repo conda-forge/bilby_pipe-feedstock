@@ -31,7 +31,7 @@ build:
     - bilby_pipe_to_ligo_skymap_samples = bilby_pipe.ligo_skymap:main
     - bilby_pipe_reweight_result = bilby_pipe.data_analysis:reweight
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -41,7 +41,7 @@ requirements:
     - setuptools >=42
     - setuptools-scm >=3.4.3
   run:
-    - astropy
+    - astropy-base
     - bilby >=2.1.2
     - configargparse
     - corner
@@ -64,7 +64,7 @@ requirements:
     - seaborn
     - tqdm
     # for bilby[gw]
-    - astropy >=5
+    - astropy-base >=5
     - pyfftw
     - pytables
     - python-lal
