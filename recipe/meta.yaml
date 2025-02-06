@@ -42,7 +42,7 @@ requirements:
     - setuptools-scm >=3.4.3
   run:
     - astropy-base
-    - bilby >=2.1.2
+    - bilby >=2.4.0
     - configargparse
     - corner
     - dynesty >=1.0.0
