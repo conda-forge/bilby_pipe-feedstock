@@ -34,7 +34,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-bilby_pipe-green.svg)](https://anaconda.org/conda-forge/bilby_pipe) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bilby_pipe.svg)](https://anaconda.org/conda-forge/bilby_pipe) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bilby_pipe.svg)](https://anaconda.org/conda-forge/bilby_pipe) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bilby_pipe.svg)](https://anaconda.org/conda-forge/bilby_pipe) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-bilby__pipe-green.svg)](https://anaconda.org/conda-forge/bilby_pipe) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/bilby_pipe.svg)](https://anaconda.org/conda-forge/bilby_pipe) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/bilby_pipe.svg)](https://anaconda.org/conda-forge/bilby_pipe) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/bilby_pipe.svg)](https://anaconda.org/conda-forge/bilby_pipe) |
 
 Installing bilby_pipe
 =====================
