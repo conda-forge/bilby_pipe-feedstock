@@ -58,9 +58,7 @@ requirements:
     - plotly
     - pycondor >=0.6
     - python >={{ python_min }}
-    - python-ldas-tools-framecpp
     - python-ligo-lw >=1.8.0
-    - python-nds2-client
     - scipy >=1.2.0
     - seaborn
     - tqdm
