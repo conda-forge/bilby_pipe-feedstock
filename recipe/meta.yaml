@@ -1,5 +1,5 @@
 {% set name = "bilby_pipe" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 070252268d6c76413c71ebb25b58f87ea93b025a4896aa2c2ea0a77346d098db
+  sha256: 0476146edd541a9f17f3a3a9e2a6696d91c81528f5dbfcbb49be0d00f3e36d0e
 
 build:
   entry_points:
@@ -32,7 +32,7 @@ build:
     - bilby_pipe_to_ligo_skymap_samples = bilby_pipe.ligo_skymap:main
     - bilby_pipe_reweight_result = bilby_pipe.data_analysis:reweight
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
