@@ -57,7 +57,7 @@ requirements:
     - plotly
     - pycondor >=0.6
     - python >={{ python_min }}
-    - python-ligo-lw >=1.8.0
+    - igwn-ligolw >=1.8.0
     - scipy >=1.2.0
     - seaborn
     - tqdm
