@@ -53,7 +53,7 @@ requirements:
     - jinja2
     - ligo-gracedb
     - matplotlib-base
-    - numpy
+    - numpy <2.4.0
     - plotly
     - pycondor >=0.6
     - python >={{ python_min }}
