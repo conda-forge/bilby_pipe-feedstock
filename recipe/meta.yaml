@@ -1,6 +1,6 @@
 {% set name = "bilby_pipe" %}
 {% set version = "1.8.1" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -49,7 +49,7 @@ requirements:
     - dynesty >=1.0.0
     - future
     - gwosc
-    - gwpy >=3.0.4
+    - gwpy >=4.0.0
     - jinja2
     - ligo-gracedb
     - matplotlib-base
@@ -57,7 +57,7 @@ requirements:
     - plotly
     - pycondor >=0.6
     - python >={{ python_min }}
-    - python-ligo-lw >=1.8.0
+    - igwn-ligolw >=1.8.0
     - scipy >=1.2.0
     - seaborn
     - tqdm
