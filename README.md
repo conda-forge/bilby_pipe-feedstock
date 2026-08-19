@@ -15,7 +15,6 @@ Documentation: https://lscsoft.docs.ligo.org/bilby_pipe/
 
 A package for automating transient gravitational wave parameter estimation
 
-
 Current build status
 ====================
 
