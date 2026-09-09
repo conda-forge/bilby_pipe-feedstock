@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.9.2"
+  version: "1.10.0"
   python_min: "3.11"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/b/bilby_pipe/bilby_pipe-${{ version }}.tar.gz
-  sha256: c77daa9fd96853ece52124736dbda198745be4aac0f079daeffe29ee4b6e34fe
+  sha256: 899f5e7548284e88264b98c39310d2cca6a550b0e8b943ab38a50194cc28fb8a
 
 build:
   number: 0
